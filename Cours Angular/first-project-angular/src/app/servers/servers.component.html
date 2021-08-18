@@ -1,0 +1,13 @@
+<label>Nom du Serveur :</label>
+<input type="text" class="form-control" [(ngModel)]="serverName">
+<input type="submit" value="Ajouter" [disabled]="!this.autorizServer" (click)="onCreateServer()">
+<p [innerText]="autorizServer"></p>
+<p *ngIf="serverCreated; else noServer">
+  Le serveur {{serverName}} a été crée
+</p>
+
+<ng-template #noServer>
+  <p>YA RIEN, NADA , AUCUN SERVER</p>
+</ng-template>
+<hr>
+<app-server *ngFor="let serv of servers"></app-server>

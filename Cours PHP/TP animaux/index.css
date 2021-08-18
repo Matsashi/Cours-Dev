@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+:root{
+    --couleur1: #FFE8D6;     
+    --couleur2: #B7B7A4;
+    --couleur3: #6B705C;
+    scroll-behavior: smooth;  
+}
+body{
+    margin : 0;
+    padding : 0;
+    background-color: var(--couleur1);
+}
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--couleur3);
+    padding-bottom: 2%;
+}
+h1{
+    font-size: 4rem;
+    font-family:'Yellowtail', cursive;
+}
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.menu {
+    text-decoration: none;
+    color: var(--couleur1);
+    font-size: 2rem;
+    
+}
+.menu:hover{
+    transform: scale(1.2);
+}
+article{
+    border-bottom: black solid 1px;
+    padding: 5%;
+    margin-left:2%;
+    margin-right: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 3;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    cursor: pointer;
+}
+.close{
+    display: flex;
+    justify-content:flex-end;
+    width:40%;
+}
+h2{
+    font-size:2.5rem;
+}
+section {
+    display: flex;
+    justify-content: center;
+    width:40%;
+}
+img {
+    width: 100%;
+}
+p {
+    font-style: italic;
+    font-size: 1.5rem;
+}
+
+.ajout_form {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin-top: 5%;
+    
+
+}
+
+textarea {
+    resize: vertical;
+}
+
+.ajout_form input, textarea {
+    margin-bottom: 2%;
+}
+.container_section{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.container_form {    
+    width: 50%;
+    background-color: #6B705C;
+    border-radius: 30px;
+}
+
+input[type="submit"] {
+    width: 20%;
+    align-self: center;
+    border-radius: 25px;
+}
+input[type="submit"]:active {
+    transform: translateY(2px);
+}
+input[type="submit"]:hover {
+    cursor:pointer;
+}

@@ -1,0 +1,242 @@
+@media screen and (min-width: 600px)
+{
+    body
+    {
+        background-color: rgb(22,34,46);
+        height: 60rem;
+        margin: 0;
+    }
+    #checkbox
+    {
+        display: none;
+    }
+    #toggle
+    {
+        display: none;
+    }
+    #menu
+    {
+        display: flex;
+        justify-content: flex-start;
+        color: white;
+    }
+    section
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 60rem;
+        font-size: large;
+        
+    }
+    #inondation
+    {
+        float: left;
+        width: 60%;
+    }
+    img
+    {
+        width: 100%;
+        height: 100%;
+    }
+    #Texte
+    {
+        margin-left: 50%;
+        box-shadow: -1px 2px 5px 4px black;
+        background-color: rgb(22,34,46);
+        position: absolute;
+        color: white;
+    }
+    #titreMontpellier
+    {
+        display: flex;
+        flex-direction: row;
+        color: orange;
+        margin-left: 2rem;
+    }
+    #titreMontpellier:after
+    {
+        content: "";
+        border-bottom: 2px solid rgb(253, 164, 0);
+        flex: 1 1;  
+        margin-left: 1%; 
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-right: 0%;
+    }
+    p
+    {
+    margin: 2em;   
+    }
+    ul
+    {
+        list-style-type: none;
+        display: flex;
+        justify-content: flex-end;
+    }
+    li
+    {
+        border: orange solid 2px;
+        margin-right: 2.75em;
+        padding: 1em;
+        cursor: pointer;
+    }
+    li:hover
+    {
+        animation: anim 2s infinite;
+    }
+    @keyframes anim 
+    {
+        from {background-color: rgb(22,34,46);}
+        50% {background-color: rgb(253,164,0);}
+        to {background-color: rgb(22,34,46);}
+    }
+    li:active
+    {
+        background-color: #3e8e41;
+        transform: translateY(4px);
+    }
+    #chartres
+    {
+        margin-left: 40%;
+        width: 60%;
+    }
+    #Texte2
+    {
+        margin-right: 50%;
+        box-shadow: -1px 2px 5px 4px black;
+        background-color: rgb(22,34,46);
+        position: absolute;
+        color: white;
+    }
+    #titreChartres
+    {
+        display: flex;
+        justify-content: flex-end;
+        color: orange;
+        margin-right: 2rem;
+    }
+    #titreChartres:before
+    {
+        content: "";
+        border-bottom: 2px solid rgb(253, 164, 0);
+        flex: 1 1;  
+        margin-left: 0%; 
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-right: 1%;
+    }
+}
+@media screen and (max-width: 599px)
+{
+    body
+    {
+        background-color: rgb(22,34,46);
+        margin: 0%;
+    }
+    #checkbox
+    {
+        display: none;
+    }
+    #toggle
+    {
+        display:flex;
+        justify-content: center;
+        font-size: xx-large;
+        color: white;
+    }
+    #checkbox:checked ~ #menu
+    {
+        display: block;
+    }
+    #menu
+    {
+        display: none;
+        color: white;
+    }
+    #accueil
+    {
+        display: flex;
+        justify-content: center;
+    }
+    #locations
+    {
+        display: flex;
+        justify-content: center;
+    }
+    #contact
+    {
+        display: flex;
+        justify-content: center;
+    }
+    section
+    {
+        font-size: large;    
+    }
+    img
+    {
+        width: 100%;
+    }
+    #Texte
+    {
+        box-shadow: 3px 10px 20px 10px black;
+        background-color: rgb(22,34,46);
+        margin: 2rem;
+        color: white;
+    }
+    h2
+    {
+        display: flex;
+        justify-content: center;
+        color: orange;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-top: 2rem;
+    }
+    #ligne
+    {
+        border-bottom: rgb(253, 164, 0) solid 1px;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+    p
+    {
+    margin: 2em;   
+    }
+    ul
+    {
+        list-style-type: none;
+        display: flex;
+        justify-content: flex-end;
+    }
+    li
+    {
+        border: orange solid 2px;
+        margin-right: 2.75rem;
+        padding: 1rem;
+        cursor: pointer;
+        margin-bottom: 2rem;
+    }
+    li:hover
+    {
+        animation: anim 2s infinite;
+    }
+    @keyframes anim 
+    {
+        from {background-color: rgb(22,34,46);}
+        50% {background-color: rgb(253,164,0);}
+        to {background-color: rgb(22,34,46);}
+    }
+    li:active
+    {
+        background-color: #3e8e41;
+        transform: translateY(4px);
+    }
+    #Texte2
+    {
+        box-shadow: 3px 10px 20px 10px black;
+        background-color: rgb(22,34,46);
+        margin: 2rem;
+        color: white;
+    }
+}

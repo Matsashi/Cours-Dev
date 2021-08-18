@@ -1,0 +1,19 @@
+body {
+    background-color: #FFFFEE;    
+}
+
+h1 {
+    color:red;
+}
+
+div > p {
+    border: solid black 1px;
+}
+
+.important {
+    background-color: #FFE0E0;
+}
+
+.first {
+    font-weight: bold;
+}

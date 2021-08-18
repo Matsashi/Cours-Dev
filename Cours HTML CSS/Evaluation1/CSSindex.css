@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@media screen and (min-width: 600px)
+{
+    body
+    {
+        --main-color: rgb(240,237,230);
+        --secondary-color: rgb(22,34,46);
+        --main-font: 'Dancing Script', cursive;
+        --secondary-font: 'Varela Round', sans-serif;
+        background-color: var(--main-color);
+        font-family: var(--main-font);
+        font-size: 30px;
+    }
+    #navBar
+    {
+        position: fixed;
+        left:0;
+        top: 0;
+        right: 0;
+        width: 100%;
+        background-color: var(--main-color);
+        border-bottom: var(--secondary-color) 5px solid;
+    }
+    ul
+    {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        font-size: larger;
+        padding:0%;
+        color:var(--secondary-color);
+    }
+    a
+    {
+        text-decoration: none;
+    }
+    a:visited
+    {
+        color:var(--secondary-color);
+    }
+    a:active
+    {
+        color:var(--secondary-color);
+    }
+    header
+    {
+        margin-bottom: 10rem;
+    }
+    #profil
+    {
+        border: var(--secondary-color) solid;
+        border-radius: 30px;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        transition: transform 0.5s ease;
+    }
+    #profil:hover
+    {
+        border-radius: 50%;
+        transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+    .boxLeft
+    {
+        background-color: var(--secondary-color);
+        color: var(--main-color);
+        margin-right: 25%;
+        border-radius: 30px;
+    }
+    h2
+    {
+        display: flex;
+        justify-content: center;
+    }
+    p
+    {
+        font-family: var(--secondary-font);
+        margin: 5%;
+        padding-bottom: 30px;
+    }
+    .boxRight
+    {
+        background-color: var(--secondary-color);
+        color: var(--main-color);
+        margin-left: 25%;
+        border-radius: 30px;
+    }
+    div
+    {
+        font-family: var(--secondary-font);
+        margin: 5%;
+    }
+    footer
+    {
+        background-color: var(--secondary-color);
+        color: var(--main-color);
+        margin-left: -10px;
+        margin-right: -8px;
+        margin-bottom: -10px;
+    }
+    #gitHub
+    {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #gitHubMobile
+    {
+        display: none;
+    }
+}
+@media screen and (max-width: 599px)
+{
+    body
+    {
+        --main-color: rgb(240,237,230);
+        --secondary-color: rgb(22,34,46);
+        --main-font: 'Dancing Script', cursive;
+        --secondary-font: 'Varela Round', sans-serif;
+        background-color: var(--secondary-color);
+        font-family: var(--main-font);
+        height: 100%;
+    }
+    #navBar
+    {
+        position: fixed;
+        left:0;
+        top: 0;
+        right: 0;
+        width: 100%;
+        background-color: var(--secondary-color);
+        border-bottom: var(--main-color) 5px solid;
+        font-size: 200%;
+    }
+    ul
+    {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        font-size: larger;
+        padding:0%;
+        color:var(--main-color);
+    }
+    a
+    {
+        text-decoration: none;
+    }
+    a:visited
+    {
+        color:var(--main-color);
+    }
+    a:active
+    {
+        color:var(--main-color);
+    }
+    header
+    {
+        margin-bottom: 10em;
+    }
+    #profil
+    {
+        border: var(--main-color) solid;
+        border-radius: 30px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        transition: transform 0.5s ease;
+    }
+    #profil:hover
+    {
+        border-radius: 50%;
+        transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+    .boxLeft
+    {
+        background-color: var(--main-color);
+        color: var(--secondary-color);
+        margin-right: 25%;
+        border-radius: 30px;
+    }
+    h2
+    {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 0;
+    }
+    p
+    {
+        font-family: var(--secondary-font);
+        margin: 5%;
+        padding-bottom: 30px;
+    }
+    .boxRight
+    {
+        background-color: var(--main-color);
+        color: var(--secondary-color);
+        margin-left: 25%;
+        border-radius: 30px;
+    }
+    div
+    {
+        font-family: var(--secondary-font);
+        margin: 5%;
+    }
+    footer
+    {
+        background-color: var(--main-color);
+        color: var(--secondary-color);
+        margin-left: -10px;
+        margin-right: -8px;
+        margin-bottom: -10px;
+    }
+    #gitHub
+    {
+        display: none;
+    }
+    #gitHubMobile
+    {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

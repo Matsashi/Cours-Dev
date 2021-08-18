@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@media screen and (min-width: 600px)
+{
+    body
+    {
+        --main-color: rgb(240,237,230);
+        --secondary-color: rgb(22,34,46);
+        --main-font: 'Dancing Script', cursive;
+        --secondary-font: 'Varela Round', sans-serif;
+        background-color: var(--main-color);
+        font-family: var(--main-font);
+        font-size: 30px;
+    }
+    #navBar
+    {
+        position: fixed;
+        left:0;
+        top: 0;
+        right: 0;
+        width: 100%;
+        background-color: var(--main-color);
+        border-bottom: var(--secondary-color) 5px solid;
+    }
+    ul
+    {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        font-size: larger;
+        padding:0%;
+        color:var(--secondary-color);
+    }
+    a
+    {
+        text-decoration: none;
+    }
+    a:visited
+    {
+        color:var(--secondary-color);
+    }
+    a:active
+    {
+        color:var(--secondary-color);
+    }
+    header
+    {
+        margin-bottom: 10rem;
+    }
+    .boxCenter
+    {
+        background-color: var(--secondary-color);
+        color: var(--main-color);
+        margin-right: 10%;
+        margin-left: 10%;
+        border-radius: 30px;
+    }
+    p
+    {
+        color: var(--main-color);
+        font-family: var(--secondary-font);
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .boxLeft
+    {
+        background-color: var(--secondary-color);
+        color: var(--main-color);
+        margin-right: 25%;
+        border-radius: 30px;
+    }
+    h2
+    {
+        display: flex;
+        justify-content: center;
+    }
+    .screenshot
+    {
+        margin-left: 10%;
+        margin-right: 10%;
+        width: 80%;
+        border: transparent solid;
+        border-radius: 30px;
+    }
+    .boxRight
+    {
+        background-color: var(--secondary-color);
+        color: var(--main-color);
+        margin-left: 25%;
+        border-radius: 30px;
+    }
+    footer
+    {
+        background-color: var(--secondary-color);
+        color: var(--main-color);
+        margin-left: -10px;
+        margin-right: -8px;
+        margin-bottom: -10px;
+    }
+    #gitHub
+    {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #gitHubMobile
+    {
+        display: none;
+    }
+}
+@media screen and (max-width: 599px)
+{
+    body
+    {
+        --main-color: rgb(240,237,230);
+        --secondary-color: rgb(22,34,46);
+        --main-font: 'Dancing Script', cursive;
+        --secondary-font: 'Varela Round', sans-serif;
+        background-color: var(--secondary-color);
+        font-family: var(--main-font);
+    }
+    #navBar
+    {
+        position: fixed;
+        left:0;
+        top: 0;
+        right: 0;
+        width: 100%;
+        background-color: var(--secondary-color);
+        border-bottom: var(--main-color) 5px solid;
+        font-size: 200%;
+    }
+    ul
+    {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        font-size: larger;
+        padding:0%;
+        color:var(--main-color);
+    }
+    a
+    {
+        text-decoration: none;
+    }
+    a:visited
+    {
+        color:var(--main-color);
+    }
+    a:active
+    {
+        color:var(--main-color);
+    }
+    header
+    {
+        margin-bottom: 10rem;
+    }
+    h2
+    {
+        display: flex;
+        justify-content: center;
+    }
+    p
+    {
+        color: var(--secondary-color);
+        font-family: var(--secondary-font);
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .boxLeft
+    {
+        background-color: var(--main-color);
+        color: var(--secondary-color);
+        margin-right: 25%;
+        border-radius: 30px;
+    }
+    .screenshot
+    {
+        margin-left: 10%;
+        margin-right: 10%;
+        width: 80%;
+        border: transparent solid;
+        border-radius: 30px;
+    }
+    .boxRight
+    {
+        background-color: var(--main-color);
+        color: var(--secondary-color);
+        margin-left: 25%;
+        border-radius: 30px;
+    }
+    footer
+    {
+        background-color: var(--main-color);
+        color: var(--secondary-color);
+        margin-left: -10px;
+        margin-right: -8px;
+        margin-bottom: -10px;
+    }
+    #gitHub
+    {
+        display: none;
+        
+    }
+    #gitHubMobile
+    {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

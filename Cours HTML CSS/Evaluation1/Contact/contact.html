@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link href="CSScontact.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav id="navBar">
+            <ul>
+                <a href="../Projets/projets.html"><li>Projets</li></a>
+                <a href="../index.html"><li>Accueil</li></a>
+                <a href="../Contact/contact.html"><li>Contact</li></a>
+            </ul>
+        </nav>
+    </header>
+    <section id=liensContact>
+        <article>
+            <a href="tel:+33643879982"><img id="phone" alt="phone" src="ImagesContact/phone.png"><img alt="phoneM" id="phoneMobile" src="ImagesContact/phoneM.png"></a>
+        </article>
+        <article>
+            <a href="mailto:matthew.pottier@hotmail.fr"><img id="mail" alt="mail" src="ImagesContact/mail.png"><img alt="mailM" id="mailMobile" src="ImagesContact/mailM.png"></a>
+        </article>
+    </section>
+    <section class="boxCenter">
+        <form method="POST" action="#">            
+                <label for="prenom">Votre nom :</label>
+                <input type="text" name="prenom" id="prenom" required>            
+                <label for="email">Votre email :</label>
+                <input type="text" name="email" id="email" required>           
+                <label for="tel">Votre numéro de téléphone :</label>
+                <input type="text" name="tel" id="tel" required>            
+                <label for="subject">Le sujet du message :</label>
+                <input type="text" name="subject" id="subject" required>            
+                <label for="message">Votre message :</label>
+                <textarea rows="20" cols="50" id="message" required></textarea>            
+                <input id="button" type="submit" value="Envoyer">
+        </form>
+    </section>
+    <footer>
+        <h2>Mes réseaux</h2>
+        <a href="https://github.com/Matsashi" target="_blank"><img alt="github" id="gitHub" src="../ImagesIndex/GitHub.png"><img alt="gitHubM" id="gitHubMobile" src="../ImagesIndex/GitHubMobile.png"></a>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,28 @@
+body{
+    min-height: 100vh;
+    background-color: rgb(2,0,36);
+    background-color: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(22,34,46,1) 35%, rgba(30,56,82,1) 100%);
+}
+h2{
+    margin-bottom: 3%;
+}
+.sectionCarousel{
+    margin-top: 5%;
+}
+.scrollspy-example{
+    position: relative;
+    height: 250px;
+    overflow-y: scroll;
+}
+.articleOfTheWeek{
+    margin-top: 5%;
+}
+.modalButton{
+    margin-top: 50px;
+}
+
+@media screen and (max-width:640px) {
+    .articleOfTheWeek{
+        padding-left: 5%;
+    }
+}

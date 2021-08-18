@@ -1,0 +1,8 @@
+<div [ngStyle]="{backgroundColor: getColor()}">ID du serveur :
+  <small>
+    {{getServerId()}}
+  </small>
+  <h2>Le serveur est {{serversStatus}}</h2>
+  <i [ngClass]="serversStatus === 'ON' ? 'on' : ''">{{serverDesc}}</i>
+  <hr>
+</div>

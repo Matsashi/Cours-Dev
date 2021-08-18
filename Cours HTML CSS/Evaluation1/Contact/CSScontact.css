@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@media screen and (min-width: 600px)
+{
+    body
+    {
+        --main-color: rgb(240,237,230);
+        --secondary-color: rgb(22,34,46);
+        --main-font: 'Dancing Script', cursive;
+        --secondary-font: 'Varela Round', sans-serif;
+        background-color: var(--main-color);
+        font-family: var(--main-font);
+        font-size: 30px;
+    }
+    #navBar
+    {
+        position: fixed;
+        left:0;
+        top: 0;
+        right: 0;
+        width: 100%;
+        background-color: var(--main-color);
+        border-bottom: var(--secondary-color) 5px solid;
+    }
+    ul
+    {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        font-size: larger;
+        padding:0%;
+        color:var(--secondary-color);
+    }
+    a
+    {
+        text-decoration: none;
+    }
+    a:visited
+    {
+        color:var(--secondary-color);
+    }
+    a:active
+    {
+        color:var(--secondary-color);
+    }
+    header
+    {
+        margin-bottom: 10rem;
+    }
+    #liensContact
+    {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    #phone
+    {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #phoneMobile
+    {
+        display: none;
+    }
+    #mail
+    {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #mailMobile
+    {
+        display: none;
+    }
+    .boxCenter
+    {
+        background-color: var(--secondary-color);
+        color: var(--main-color);
+        margin-right: 10%;
+        margin-left: 10%;
+        border-radius: 30px;
+    }
+    p
+    {
+        margin-bottom: 0;
+        margin-top: 5px;
+    }
+    label
+    {
+        font-family: var(--secondary-font);
+        display: flex;
+        justify-content: center;
+    }
+    input
+    {
+        display: flex;
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: var(--secondary-font);
+        background-color: var(--main-color);
+    }
+    textarea
+    {
+        display: flex;
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: var(--secondary-font);
+        background-color: var(--main-color);
+    }
+    #button
+    {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+        border-radius: 12px;
+        font-size: larger;
+        background-color: var(--main-color);
+        font-family: var(--main-font);
+        box-shadow: 0 9px rgb(153, 153, 153);
+    }
+    #button:active
+    {
+        background-color: rgb(62, 142, 65);
+        box-shadow: 0 5px rgb(102,102,102);
+        transform: translateY(4px);
+    }
+    #button:hover
+    {
+        background-color: rgb(62, 142, 65);
+    }
+    h2
+    {
+        display: flex;
+        justify-content: center;
+    }
+    footer
+    {
+        background-color: var(--secondary-color);
+        color: var(--main-color);
+        margin-left: -10px;
+        margin-right: -8px;
+        margin-bottom: -10px;
+    }
+    #gitHub
+    {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #gitHubMobile
+    {
+        display: none;
+    }
+}
+@media screen and (max-width:599px)
+{
+    body
+    {
+        --main-color: rgb(240,237,230);
+        --secondary-color: rgb(22,34,46);
+        --main-font: 'Dancing Script', cursive;
+        --secondary-font: 'Varela Round', sans-serif;
+        background-color: var(--secondary-color);
+        font-family: var(--main-font);
+    }
+    #navBar
+    {
+        position: fixed;
+        left:0;
+        top: 0;
+        right: 0;
+        width: 100%;
+        background-color: var(--secondary-color);
+        border-bottom: var(--main-color) 5px solid;
+        font-size: 200%;
+    }
+    ul
+    {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        font-size: larger;
+        padding:0%;
+        color:var(--main-color);
+    }
+    a
+    {
+        text-decoration: none;
+    }
+    a:visited
+    {
+        color:var(--main-color);
+    }
+    a:active
+    {
+        color:var(--main-color);
+    }
+    header
+    {
+        margin-bottom: 10em;
+    }
+    #liensContact
+    {
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 20px;
+    }
+    #phone
+    {
+        display: none;
+    }
+    #phoneMobile
+    {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #mail
+    {
+        display: none;
+    }
+    #mailMobile
+    {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .boxCenter
+    {
+        background-color: var(--main-color);
+        color: var(--secondary-color);
+        margin-right: 10%;
+        margin-left: 10%;
+        border-radius: 30px;
+    }
+    p
+    {
+        margin-bottom: 0;
+        margin-top: 5px;
+    }
+    label
+    {
+        font-family: var(--secondary-font);
+        display: flex;
+        justify-content: center;
+    }
+    input
+    {
+        display: flex;
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: var(--secondary-font);
+        background-color: var(--secondary-color);
+        color: var(--main-color);
+    }
+    textarea
+    {
+        display: flex;
+        width: 80%;
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: var(--secondary-font);
+        background-color: var(--secondary-color);
+        color: var(--main-color);
+    }
+    #button
+    {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+        border-radius: 12px;
+        font-size: larger;
+        background-color: var(--main-color);
+        color: var(--secondary-color);
+        font-family: var(--main-font);
+        box-shadow: 0 9px rgb(153, 153, 153);
+    }
+    #button:active
+    {
+        background-color: rgb(62, 142, 65);
+        box-shadow: 0 5px rgb(102,102,102);
+        transform: translateY(4px);
+    }
+    #button:hover
+    {
+        background-color: rgb(62, 142, 65);
+    }
+    h2
+    {
+        display: flex;
+        justify-content: center;
+    }
+    footer
+    {
+        background-color: var(--main-color);
+        color: var(--secondary-color);
+        margin-left: -10px;
+        margin-right: -8px;
+        margin-bottom: -10px;
+    }
+    #gitHub
+    {
+        display: none;
+    }
+    #gitHubMobile
+    {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

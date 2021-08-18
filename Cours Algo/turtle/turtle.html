@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>HTML5 canvas turtle graphics</title>
+<style>
+  article, aside, figure, footer, header, hgroup, 
+  menu, nav, section { display: block; }
+  canvas {border: 1px dotted #564b47;}
+</style>
+</head>
+<body>
+
+<h1>HTML5 canvas turtle graphics</h1>
+
+<div>
+	<canvas id="myDrawing" width="600" height="600"></canvas>
+</div>
+	
+<script src="turtle.js"></script>
+<script src="anim.js"></script>
+
+<script>
+  set_pos(300,300);
+  face_right();
+  forward(100);
+  face_down();
+  forward(100);
+  for(let i=0; i<2; i++)
+  {
+    face_left();
+    forward(50);
+    face_up();
+    forward(50);
+  }
+/*
+// Write your code here.
+
+// Change the turtle position
+set_pos(300,100);
+
+// Set the line width
+set_line_width(10);
+
+// Repeat
+for(let i=0 ; i<4; i++) {}   4 étant la variable
+ 
+// Change the color 
+// Predefined colors are : white, black, red, green, blue, yellow, fuchsia, aqua ; all with the "color." prefix
+change_color(color.blue);
+// You can also specify a color with its RGB notation
+change_color("#8b22b5");
+// Another possibility is to use :
+// shift_color(0.25); // -> passe en mode "arc-en-ciel" et se décale de 25%
+
+// Move forward by an amount of pixel
+forward(50);
+
+change_color("#2DC567");
+// Move backward by an amount of pixel
+backward(10);
+
+// Turn right by an angle
+right(90);
+forward(100);
+
+// Turn left by an angle
+left(140);
+forward(50);
+
+// Face to a side
+face_left(); // face_right, face_up, face_down
+
+// Draw an arc on the turtle's left, given a radius and an angle
+arc_left(50,90);
+
+// Draw an arc on the turtle's right, given a radius and an angle
+arc_right(100,90);
+
+// Stop the writing
+up();
+
+backward(200);
+
+// Start the writing
+down();
+
+right(135);
+forward(100);
+
+// Shift the colors, rainbow
+shift_color(0);
+shift_color(0.45);
+*/
+
+</script>
+
+</body>
+</html>

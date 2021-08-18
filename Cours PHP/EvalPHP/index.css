@@ -1,0 +1,40 @@
+html,body{
+    background-color: lightsalmon;
+    height: 100vh;
+}
+article{
+    background-color: lightsalmon;
+}
+h1{
+    display: flex;
+    justify-content: center;
+}
+header{
+    border-bottom: solid 1px black;
+    background-color: cornsilk;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+section{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 50px;
+    margin-left: 35%;
+    margin-right: 35%;
+}
+.behindHeader{
+    height: 90px;
+}
+section img{
+    width: 75%;
+}
+form{
+    margin-top:10%;
+}
+#divButton{
+    display: flex;
+    justify-content: center;
+}

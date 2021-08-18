@@ -1,0 +1,4 @@
+<h1>Username</h1>
+<input type="text" [(ngModel)]="userName" class="inputText" (input)="changeBoolean()">
+<input type="button" value="Reset User" [disabled]="!accessButton" (click)="resetUsername()">
+<p [innerText]="userName"></p>

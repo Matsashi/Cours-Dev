@@ -1,0 +1,23 @@
+body{
+    background-color: black;
+}
+header{
+    color:orangered;
+    display: flex;
+    justify-content: center;
+    font-size: xx-large;
+}
+p{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: white;
+}
+.lower{
+    background-color: red;
+}
+.higher{
+    background-color: red;
+}
+.victory{
+    background-color: green;
+}

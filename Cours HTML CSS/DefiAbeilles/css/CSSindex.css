@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap');
+body{
+    --main-color: #41210A;
+    --main-font: 'Montserrat Alternates';
+    color: var(--main-color);
+    font-family: var(--main-font);
+}
+#navBar{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    width: 100%;
+    background-color: #FFFFFF99;
+    font-size: 20px;
+}
+#menu{
+    display: flex;
+    justify-content: space-evenly;
+}
+#bandeYellow{
+    margin-top: 60px;
+    background-color: #FFCB05;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

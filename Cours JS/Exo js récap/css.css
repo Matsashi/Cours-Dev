@@ -1,0 +1,208 @@
+body{
+    --primaryColor: #16222e;
+    --secondaryColor: white;
+    --thirdColor: #ffa500;
+    --fourthColor:grey;
+    background-color:var(--primaryColor);
+    /* display: flex;
+    align-items: center;
+    flex-direction: row; */
+    color: var(--secondaryColor);
+    /* min-height: 100vh; */
+    margin: 0px;
+}
+.gradientBody{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(22,34,46,1) 35%, rgba(30,56,82,1) 100%);
+}
+p{
+    letter-spacing: 1.5px;
+}
+h2{
+    color: var(--thirdColor);
+    background-color: var(--primaryColor);
+    text-shadow: 1px 1px 1px 1px black;
+    z-index: 1;
+    width: fit-content;
+    padding-right: 10px;
+}
+/* h2::after{
+    content: '';
+    width: 50%;
+    height: 1px;
+    background-color: var(--thirdColor);
+} */
+section{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    min-height: 90vh;
+    overflow: hidden;
+}
+.bloc_text{
+    width: 100vw;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    right: 10%;
+    /* margin-left:-10%; */
+    background-color:var(--primaryColor);
+    box-shadow: 1px 6px 5px 5px black;
+    margin-right: -10%;
+    padding-bottom: 5%;
+}
+.toTheLeft{
+    position: relative;
+    left: 10%;
+    margin-left: -10%;
+}
+
+.text{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    margin-left: auto;
+    width: 90%;
+    margin-right: auto;
+}
+
+img{
+    width: 60%;
+    height: 40%;
+}
+.orangeLine{
+    width: 100%;
+    border-bottom: 1px solid orange;
+    position: relative;
+    bottom: 30px;
+    padding-left: 10px;
+    margin-left: 4%;
+}
+
+/* BOUTON */
+.buttonLogement{
+   float: right;
+   width: 180px;
+   height: 50px;
+   color: var(--secondaryColor);
+   background-color: var(--primaryColor);
+   border: 1px solid var(--thirdColor) ;
+   text-transform: uppercase;
+}
+.buttonLogement:hover{
+		/* background-color: var(--thirdColor); */
+		border:none!important;
+        animation: infinite 3s lighting;
+        cursor: pointer;
+}
+
+@keyframes lighting {
+    from {
+        background-color: var(--primaryColor)
+    } 
+    50%{
+        background-color: var(--thirdColor);
+    }
+    to{
+        background-color: var(--primaryColor)
+    }
+}
+.buttonLogement:active {
+    background-color: var(--thirdColor);
+    box-shadow: 0 5px black ;
+    transform: translateY(4px);
+  }
+  /* BOUTON END */
+
+  /* MENU */
+  /* #burger{
+      visibility: hidden;
+  } */
+ul {
+    display: flex;
+    flex-direction: row;
+}
+li {
+    list-style-type: none;
+    padding: 10px;
+}
+a {
+    text-decoration: none;
+    color: var(--secondaryColor);
+}
+[type="checkbox"] {
+    display: none;
+}
+
+@media screen and (max-width: 850px) {
+    body{
+        font-size: 1.2rem;
+    }    
+    section{
+        flex-direction: column;
+        /* justify-content: space-around; */
+    }
+    .bloc_text{
+        position: unset;
+        margin-left: auto;
+        margin-right:auto;
+        width: 80%;
+        height: fit-content;
+        margin-top: 10%;
+        box-shadow: 2px 17px 24px 11px rgba(0,0,0,0.82);
+    }
+
+    .orangeLine{
+        position: unset;
+        padding:unset;
+        margin: unset;
+    }
+    img{
+        width: 100%;
+        height: 65%;
+    }
+    /* MENU */
+    
+    ul {
+        flex-direction: column;
+        display: none;
+      }
+    [type="checkbox"] {
+    display: none;
+    }
+    input[type="checkbox"]:checked ~ ul {
+        display: flex;
+        align-items: center;
+    }
+    
+    /* Gestion de la checkbox */
+    input[type="checkbox"] + label:before {
+        font-family: FontAwesome;
+        font-size: 65px;
+        margin-left:15px;
+        
+    }
+    input[type="checkbox"] + label:before {
+        content: "\f0c9";
+        cursor: pointer;
+       
+    }
+
+    input[type="checkbox"]:not(:checked) + label:before {
+        content: "\f0c9";
+      
+    }
+
+    input[type="checkbox"]:checked + label:before {
+        content: "\f00d";
+        
+    }
+    /* MENU END */
+    /* HEADER */
+    header{
+        margin-bottom: 3%;
+        padding-top: 3%;
+    }
+ 
+}

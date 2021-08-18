@@ -1,0 +1,10 @@
+<label>Nom article</label>
+<input type="text" [(ngModel)]="newArticleName">
+<label>Contenu article</label>
+<input type="text" [(ngModel)]="newArticleContent">
+<input type="submit" (click)="onAddArticle()" value="Ajouter Article">
+<input type="submit" (click)="onAddBlueprint()" value="Ajouter Blueprint">
+<div class="Panel default" *ngFor="let articles of articleElements">
+  <strong *ngIf="(articles.Type=='Article')">{{articles.Name}} {{articles.Content}}</strong>
+  <em *ngIf="(articles.Type=='Blueprint')">{{articles.Name}} {{articles.Content}}</em>
+</div>
