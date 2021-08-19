@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Love simulator</title>
-    <link href="index.css" rel="stylesheet">
+    <link href="scss/love.css" rel="stylesheet">
     <link rel=icon href="https://img.icons8.com/emoji/452/red-heart.png">
 </head>
 <body>
@@ -37,7 +37,7 @@
             </svg>
         </div>
     </article>
-    <script src="progressbar.js"></script>
-    <script src="amour.js"></script>
+    <script src="js/progressbar.js"></script>
+    <script src="js/amour.js"></script>
 </body>
 </html>
