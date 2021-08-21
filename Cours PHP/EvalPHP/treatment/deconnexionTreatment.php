@@ -6,5 +6,5 @@ session_destroy();
 setcookie('pseudo',"",1);
 setcookie('role',"",1);
 // header ("location: lien") => Permet de rediriger vers une autre page
-header("location: ../index.php"); 
+header("location: ../mythologie.php"); 
 ?>

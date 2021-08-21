@@ -6,7 +6,7 @@
                 <a class="nav-link active" aria-current="page"
                 <?php
                 if(basename($_SERVER['PHP_SELF'])!="index.php"){
-                    echo "href='../index.php'";
+                    echo "href='../mythologie.php'";
                 }else{
                     echo "href='#'";
                 }

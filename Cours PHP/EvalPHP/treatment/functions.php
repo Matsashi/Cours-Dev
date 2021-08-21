@@ -53,7 +53,7 @@ function addUser(){
     if($result_message == "OK"){
         $login = $_POST["pseudo"];
         $_SESSION["login"]= $login;
-        header("location: ../index.php");
+        header("location: ../mythologie.php");
     }else{
     header("location: ../accountManagement/register.php?result_message=".htmlspecialchars($result_message));
     }
@@ -116,7 +116,7 @@ function connexionUser(){
         }
         $_SESSION["role"]=$role;
         $_SESSION["pseudo"]= $login;
-        header("location: ../index.php");
+        header("location: ../mythologie.php");
     }else{
     header("location: ../accountManagement/connexion.php?result_message=".htmlspecialchars($result_message));
     }
@@ -263,7 +263,7 @@ function deleteArticle(){
         $result_message = "Vide";
     }
     if($result_message=="OK"){
-        header("location: ../index.php?result_message=".htmlspecialchars($result_message));
+        header("location: ../mythologie.php?result_message=".htmlspecialchars($result_message));
     }else{
         header("location: ../articles/articlesPage.php?result_message=".htmlspecialchars($result_message));
     }

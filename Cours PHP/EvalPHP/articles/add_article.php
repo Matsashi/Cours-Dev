@@ -2,14 +2,14 @@
 session_start();
 if(isset($_SESSION["role"])){
     if($_SESSION["role"]!=="3"){
-        header ('location: ../index.php');
+        header ('location: ../mythologie.php');
     }
 }elseif(isset($_COOKIE["role"])){
     if($_COOKIE["role"]!=="3"){
-        header ('location: ../index.php');
+        header ('location: ../mythologie.php');
     }
 }else{
-    header ('location: ../index.php');
+    header ('location: ../mythologie.php');
 }
 ?>
 <!DOCTYPE html>
@@ -20,7 +20,7 @@ if(isset($_SESSION["role"])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nouveau article Mythologie</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="../mythologie.css">
 </head>
 <body>
     <?php
