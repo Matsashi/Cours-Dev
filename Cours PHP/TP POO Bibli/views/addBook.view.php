@@ -18,8 +18,8 @@ ob_start();
     </div>
     <div class="form-group">
       <label for="pdfFile" class="form-label mt-4">Fichier PDF</label>
-      <input class="form-control" type="file" id="pdfFile" aria-describedby="pdfHelp">
-      <small id="pdfHelp" class="form-text text-muted">L'ajout du pdf du livre n'est pas obligatoire, mais facilitera la lecture de ce dernier</small>
+      <input class="form-control" type="file" id="pdfFile" aria-describedby="pdfHelp" name="pdf" required>
+      <small id="pdfHelp" class="form-text text-muted">L'ajout du pdf du livre est obligatoire, il facilite la lecture de ce dernier</small>
     </div>
     <button type="submit" class="btn btn-primary">Envoyer</button>
   </fieldset>
