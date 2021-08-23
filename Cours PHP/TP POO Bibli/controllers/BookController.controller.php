@@ -1,6 +1,7 @@
 <?php
 include_once("models/class/Book.php");
 include_once("models/class/BookManager.php");
+include_once ("controllers/GlobalController.controller.php");
 class BookController{
     private $bookManager;
     function __construct(){        
@@ -25,14 +26,40 @@ class BookController{
             {
                 $data = $this->bookManager->getTable();
                 foreach ($data as $valeur) {
-                    if(iconv('UTF-8', 'ISO-8859-1//TRANSLIT//IGNORE',str_replace(" ","",mb_strtolower($_POST["title"]))) == iconv('UTF-8', 'ISO-8859-1//TRANSLIT//IGNORE',str_replace(" ","",mb_strtolower($valeur->nom)))){
-                        throw new Exception("Le livre existe déjà.");
-                    }
+                    // if(iconv('UTF-8', 'ISO-8859-1//TRANSLIT//IGNORE',str_replace(" ","",mb_strtolower($_POST["title"]))) == iconv('UTF-8', 'ISO-8859-1//TRANSLIT//IGNORE',str_replace(" ","",mb_strtolower($valeur->nom)))){
+                    //     throw new Exception("Le livre existe déjà.");
+                    // }  <== conditions pour vérifier si le livre existe déjà
                 }     
             }
         }
+        $globalController->addImage();
+        //add pdf
         $validateBook = $this->bookManager->addBookDB();
-        // throw new Exception("Erreur formulaire");
+        header ('location:' .URL.'books');
+    }
+    public function updateBook($id){
+        $book = $this->bookManager->getBookById($id);
+        require "views/updateBook.view.php";
+    }
+    public function updateBookConfirm($id){
+        $cover = $this->bookManager->getBookById($id)->getCover();
+        // si il y a une nouvelle image 
+        unlink("public/images/".$cover);
+        //ADD LA NOUVELLE IMAGE
+        ///
+        //sinon tu fais rien
+
+        $confirmBook = $this->bookManager->updateBookDB($id);
+        header ('location:' .URL.'books');
+
+    }
+    public function deleteBook($id){
+        $cover = $this->bookManager->getBookById($id)->getCover();
+        $title = $this->bookManager->getBookById($id)->getTitle();
+        $this->bookManager -> deleteBookDB($id);
+        unlink("public/images/".$cover);
+        unlink("public/pdf/".$title.".pdf");
+        header ('location:' .URL.'books');
     }
 }
 ?>

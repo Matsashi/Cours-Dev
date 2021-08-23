@@ -21,14 +21,25 @@ try{
                         break;
                     }else if($url[1]=="validate"){
                         $globalController->addImage();
+                        $globalController->addPdf();
                         $bookController->addBookValidate();
                         break;
                     }else if($url[1]=="read"){
                         $bookController->displayBook($url[2]);
                         break;
                     }else if($url[1]=="update"){
+                        $bookController->updateBook($url[2]);
+                        break;
+                    }else if($url[1]=="confirm"){
+                        $pictureToAdd = $globalController->updateImage($bookController, $url[2]);
+                        var_dump($pictureToAdd);exit;
+                        // $globalController->updatePdf();
+                        $bookController->updateBookConfirm($url[2]);
+                        $globalController->addImage($pictureToAdd);
+                        // $globalController->addPdf();
                         break;
                     }else if($url[1]=="delete"){
+                        $bookController->deleteBook($url[2]);
                         break;
                     }else{
                         throw new Exception("La page n'existe pas.");
