@@ -31,12 +31,9 @@ try{
                         $bookController->updateBook($url[2]);
                         break;
                     }else if($url[1]=="confirm"){
-                        $pictureToAdd = $globalController->updateImage($bookController, $url[2]);
-                        var_dump($pictureToAdd);exit;
-                        // $globalController->updatePdf();
-                        $bookController->updateBookConfirm($url[2]);
-                        $globalController->addImage($pictureToAdd);
-                        // $globalController->addPdf();
+                        $pictureToAdd = $globalController->updateImage();
+                        $pdfToAdd = $globalController->updatePdf();
+                        $bookController->updateBookConfirm($pictureToAdd, $pdfToAdd, $url[2]);
                         break;
                     }else if($url[1]=="delete"){
                         $bookController->deleteBook($url[2]);

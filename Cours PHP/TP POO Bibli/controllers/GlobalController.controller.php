@@ -1,6 +1,6 @@
 <?php
-abstract class GlobalController{
-    public function addImage(){
+class GlobalController{
+    public static function addImage(){
         if(!empty($_FILES['picture'])){
             $info = pathinfo($_FILES['picture']['name']);
             $error_message = null;
@@ -21,7 +21,7 @@ abstract class GlobalController{
             throw new Exception("Vous n'avez pas ajouté d'image de couverture.");
         }
     }
-    public function addPdf(){
+    public static function addPdf(){
         if(!empty($_FILES['pdf'])){
             $info = pathinfo($_FILES['pdf']['name']);
             $error_message = null;
@@ -40,17 +40,20 @@ abstract class GlobalController{
             }
         }
     }
-    public function updateImage($controller, $id){
-        if(!empty($_FILES['newPicture']['name'])){
-            $pictureToAdd = $_FILES['newPicture'];
+    public function updateImage(){
+        if(!empty($_FILES['picture']['name'])){
+            $pictureToAdd = $_FILES['picture'];
         }else{
-            $pictureToAdd = $controller->bookManager->getBookById($id)->getCover();
+            $pictureToAdd="";
         }
         return $pictureToAdd;
     }
     public function updatePdf(){
-        if(!empty($_FILES['newPdf'])){
-            $_FILES['pdf'] = $_FILES['newPdf'];
+        if(!empty($_FILES['pdf'])){
+            $pdfToAdd = $_FILES['newPdf'];
+        }else{
+            $pdfToAdd = "";
         }
+        return $pdfToAdd;
     }
 }

@@ -1,7 +1,7 @@
 <?php
 include_once("models/class/Book.php");
 include_once("models/class/BookManager.php");
-include_once ("controllers/GlobalController.controller.php");
+// include_once("controllers/GlobalController.controller.php");
 class BookController{
     private $bookManager;
     function __construct(){        
@@ -32,7 +32,7 @@ class BookController{
                 }     
             }
         }
-        $globalController->addImage();
+        // $globalC->addImage();
         //add pdf
         $validateBook = $this->bookManager->addBookDB();
         header ('location:' .URL.'books');
@@ -41,14 +41,17 @@ class BookController{
         $book = $this->bookManager->getBookById($id);
         require "views/updateBook.view.php";
     }
-    public function updateBookConfirm($id){
+    public function updateBookConfirm($pictureToAdd, $pdfToAdd, $id){
+        $info = pathinfo($_FILES['picture']['name']);
         $cover = $this->bookManager->getBookById($id)->getCover();
-        // si il y a une nouvelle image 
-        unlink("public/images/".$cover);
-        //ADD LA NOUVELLE IMAGE
-        ///
-        //sinon tu fais rien
-
+        if($pictureToAdd != ""){
+            unlink("public/images/".$cover.$info['extension']);
+            GlobalController::addImage();
+        }
+        if($pdfToAdd != ""){
+            unlink("public/pdf/".$cover.".pdf");
+            GlobalController::addPdf();
+        }
         $confirmBook = $this->bookManager->updateBookDB($id);
         header ('location:' .URL.'books');
 
