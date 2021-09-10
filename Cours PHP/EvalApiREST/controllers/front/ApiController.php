@@ -9,34 +9,35 @@ class ApiController{
         $data = $this -> APIManager -> getDBAnimaux();
         $array = [];
         // var_dump($data);
-        foreach($data as $value){
-            $arrayAnimal = [];
-            $arrayFamille = [];
-            $arrayContinent = [];
-            $previousValue = null;
-            // var_dump($value);
-            if($previousValue)
-            foreach($value as $key => $value2){
-                // var_dump($value2);
-                // var_dump($key);
-                if(str_starts_with($key, "famille")){
-                    array_push($arrayFamille, $value2);
-                    // var_dump($arrayFamille);
-                }else if(str_starts_with($key, "continent")){
-                    array_push($arrayContinent, $value2);
-                    // var_dump($arrayContinent);
-                }else if($value2 == $previousValue){
-                    array_push($arrayAnimal, $value2);
-                    $previousValue;
-                }
+        foreach($data as $key => $value){
+            if(array_key_exists($value->animal_nom,$array)){
+                // $array[$value->animal_nom];
+                $newContinent = [
+                    "idContinent"=>$value->continent_id, 
+                    "libelléContinent"=>$value->continent_libelle
+                ];
+                array_push($array[$value->animal_nom]["continents"], $newContinent);
+            }else{
+                $array[$value->animal_nom] = [                   
+                    "id" => $value->animal_id,
+                    "nom"=> $value->animal_nom, 
+                    "description"=> $value->animal_description,
+                    "image"=> $value->animal_image,
+                    "famille" => [
+                        "idFamille"=> $value->famille_id,
+                        "libelléFamille"=>$value->famille_libelle,
+                        "descriptionFamille"=>$value->famille_description
+                    ],
+                    "continents" => [[
+                        "idContinent"=>$value->continent_id, 
+                        "libelléContinent"=>$value->continent_libelle
+                    ]]
+                ];
             }
-            array_push($arrayAnimal, $arrayFamille);
-            array_push($arrayAnimal, $arrayContinent);
-            // var_dump($arrayAnimal);
-            array_push($array, $arrayAnimal);
-            var_dump($array);
         }
-        $this -> APIManager -> sendJson($data);
+        // var_dump($array);
+
+        $this -> APIManager -> sendJson($array);
     }
     public function getAnimal($url){
         $data = $this -> APIManager ->getDBAnimal($url);
