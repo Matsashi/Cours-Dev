@@ -1,0 +1,19 @@
+html, body{
+    height: 100%;
+}
+body{
+    display: flex;
+    flex-direction: column;
+}
+#content {
+    flex: 1 0 auto;
+}
+#footer {
+    flex-shrink: 0;
+}
+#navbar{
+    background-color: #f0ede6 !important;
+}
+#navbar a{
+    color: black;
+}
