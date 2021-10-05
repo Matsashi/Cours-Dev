@@ -21,6 +21,7 @@
                 <a class="navbar-brand" href="{{ path('home') }}">La boutique de Matsashi</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <a class="nav-link" href="{{ path('products') }}">Les produits</a>
                 </div>
                 {% if app.user %}
                     <a class="nav-link" aria-current="page" href={{ path('account') }}>Mon compte</a></li>
@@ -39,7 +40,7 @@
             </div>
         </nav>
         <!-- Product section-->
-        <section class="py-5" id="content">{% block content %}{% endblock %}</section>
+        <section class="py-5 container d-flex" id="content">{% block content %}{% endblock %}</section>
         <!-- Footer-->
         <footer class="py-5 bg-dark" id="footer">
             <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Matsashi</p></div>

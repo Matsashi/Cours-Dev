@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <section class="row col-sm-4 justify-content-center">
+        <div class="col-3 mb-4">
+            <p>Filtre</p>
+            <small>Colonne de filtre</small>
+        </div>
+    </section>
+    <section class="row col-sm-8">
+    {% for product in allProducts %}
+        <div class="col-3 mb-4">
+            <div class="card h-100">
+                <!-- Product image-->
+                <a href={{path('product',{slug:product.Slug})}}><img class="card-img-top" src="assets/Images/uploads/{{product.Image}}" alt="{{product.name}}" /></a>
+                <!-- Product details-->
+                <div class="card-body p-4">
+                    <div class="text-center">
+                        <!-- Product name-->
+                        <h5 class="fw-bolder">{{product.name}}</h5>
+                        <!-- Product subtitle-->
+                        <small>{{product.subtitle}}</small>
+                    </div>
+                </div>
+                <!-- Product actions-->
+                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                <!-- Product price-->
+                        <b class="text-center d-block mb-2">{{product.price / 100}}€</b>
+                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Ajouter au panier</a></div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    </section>
+{% endblock %}
