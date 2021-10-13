@@ -1,20 +1,31 @@
 <?php
 
 namespace App\Classe;
+
+use App\Entity\Product;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\RequestStack;
 
 class Cart{
     private $session;
+    private $entityManager;
     
-    public function __construct(RequestStack $requestStack)
+    public function __construct(RequestStack $requestStack, EntityManagerInterface $entityManager)
     {
         $this->session = $requestStack;
+        $this->entityManager = $entityManager;
     }
 
     public function add($id){
         $cart = $this->session->getSession()->get('cart');
-        if(array_key_exists($id, $cart)){
-            $cart[$id] += 1;
+        // $cart =  [];
+        // $this->session->getSession()->set('cart', $cart);
+        if(is_array($cart)){
+            if(array_key_exists($id, $cart)){
+                $cart[$id] += 1;
+            }else{
+                $cart += [$id=>1];
+            }
         }else{
             $cart += [$id=>1];
         }
@@ -39,7 +50,7 @@ class Cart{
             }else
             {
                 $cartComplete[]=[
-                "product"=>$product_object,
+                "product"=>$product_object, 
                 'quantity'=>$quantity
                 ];
             }

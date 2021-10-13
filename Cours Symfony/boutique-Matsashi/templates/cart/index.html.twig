@@ -1,20 +1,67 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello CartController!{% endblock %}
-
-{% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/wamp64/www/boutique-Matsashi/src/Controller/CartController.php'|file_link(0) }}">src/Controller/CartController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/wamp64/www/boutique-Matsashi/templates/cart/index.html.twig'|file_link(0) }}">templates/cart/index.html.twig</a></code></li>
-    </ul>
+{% block content %}
+{% set totalProduct = 0 %}
+{% set totalPrice = 0 %}
+<div class="row" style="width: 100%;">
+    <div class="col-12 px-0">
+        <h2>Mon panier</h2>
+        <p>Retrouvez l'ensemble des produits que vous avez mis dans votre panier</p>
+        <hr size="5" id="hr-tab-top">
+    </div>
+    <div class="row py-3">
+        <div class="col-8">
+            <strong>Produit</strong>
+        </div>
+        <div class="col-1">
+            <strong>Quantité</strong>
+        </div>
+        <div class="col-2">
+            <strong>Prix à l'unité</strong>
+        </div>
+        <div class="col-1">
+            <strong>Total</strong>
+        </div>
+    </div>
+    <hr size="4">
+    {% for product in cart %}
+    <div class="row">
+        <div class="col-2">
+            <img src="assets/Images/uploads/{{product.product.Image}}" alt="{{product.product.name}}" width="50%">
+        </div>
+        <div class="col-4">
+            <h5>{{product.product.name}}</h5>
+            <p>{{product.product.description}}</p>
+        </div>
+        <div class="col-2">
+        </div>
+        <div class="col-1">
+            <p>{{product.quantity}}</p>
+        </div>
+        <div class="col-2">
+            <p>{{product.product.price/100}}€</p>
+        </div>
+        <div class="col-1">
+            <p>{{product.quantity * product.product.price / 100}}€</p>
+        </div>
+    </div>
+    <hr size="4" color="grey">
+    {% set totalPrice = totalPrice + product.quantity * product.product.price / 100 %}
+    {% set totalProduct = totalProduct + product.quantity%}
+    {% endfor %}
+    <div class="row">
+        <div class="col-9"></div>
+        <div class="col-3">
+            <strong>Nombre total d'articles :</strong>
+            <small>{{totalProduct}}</small>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-8"></div>
+        <div class="col-4">
+            <strong>Total de mon panier en euros :</strong>
+            <small>{{totalPrice}}€</small>
+        </div>
+    </div>
 </div>
 {% endblock %}
